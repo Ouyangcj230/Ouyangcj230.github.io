@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人知识库 - 技术 - 图片生成 - Stable Diffusion基础原理</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <aside id="sidebar">
+            <h2>导航</h2>
+            <ul>
+                <li><a href="index.html">主页</a></li>
+                <li><a href="tech.html">技术</a></li>
+                <li><a href="picture.html">图片生成</a></li>
+                <li><a href="stable-diffusion-basics.html">Stable Diffusion基础原理</a></li>
+                <li><a href="#settings">设置</a></li>
+            </ul>
+            <h2>Stable Diffusion知识</h2>
+            <ul>
+                <li><a href="#introduction">简介</a></li>
+                <li><a href="#core-concepts">核心概念</a></li>
+                <li><a href="#architecture">架构</a></li>
+                <li><a href="#training">训练过程</a></li>
+                <li><a href="#inference">推理过程</a></li>
+                <li><a href="#advantages">优势</a></li>
+            </ul>
+        </aside>
+        <main>
+          <h1>Stable Diffusion基础原理</h1>
+            <div id="search">
+                <input type="text" placeholder="搜索Stable Diffusion知识...">
+                <button>搜索</button>
+            </div>
+            <button id="add-knowledge">添加Stable Diffusion知识</button>
+            <div id="knowledge-list">
+                <div class="knowledge-item">
+                    <h3>Stable Diffusion简介</h3>
+                    <p>分类：简介</p>
+                    <p>Stable Diffusion是一种先进的深度学习文本到图像生成模型，由CompVis、Stability AI和LAION共同开发。它能够根据文本描述生成高质量、逼真的图像，并支持图像编辑、修复等多种任务。</p>
+                </div>
+                <div class="knowledge-item">
+                    <h3>核心概念：扩散过程</h3>
+                    <p>分类：核心概念</p>
+                    <p>Stable Diffusion基于扩散模型原理。扩散过程包括前向过程（逐步向图像添加噪声）和反向过程（逐步去除噪声）。模型学习如何在反向过程中从噪声重建原始图像，从而实现图像生成。</p>
+                </div>
+                <div class="knowledge-item">
+                    <h3>Stable Diffusion架构</h3>
+                    <p>分类：架构</p>
+                    <p>Stable Diffusion的架构主要包含三个部分：
+                       1. 文本编码器：将输入的文本转换为向量表示。
+                       2. U-Net：核心组件，负责去噪过程。
+                       3. 变分自编码器（VAE）：用于图像压缩和重建，提高生成效率。</p>
+                </div>
+                <div class="knowledge-item">
+                    <h3>训练过程</h3>
+                    <p>分类：训练过程</p>
+                    <p>Stable Diffusion的训练过程包括：
+                       1. 收集大量图像-文本对数据。
+                       2. 对图像应用不同程度的噪声。
+                       3. 训练模型预测去噪步骤，同时考虑文本条件。
+                       4. 优化模型参数，使其能够准确预测去噪过程。</p>
+                </div>
+                <div class="knowledge-item">
+                    <h3>推理过程</h3>
+                    <p>分类：推理过程</p>
+                    <p>生成图像的推理过程如下：
+                       1. 将输入文本编码为向量。
+                       2. 从随机噪声开始，逐步应用去噪过程。
+                       3. 在每一步中，模型预测下一步的去噪结果。
+                       4. 最终得到与输入文本描述相匹配的清晰图像。</p>
+                </div>
+                <div class="knowledge-item">
+                    <h3>Stable Diffusion的优势</h3>
+                    <p>分类：优势</p>
+                    <p>1. 高质量输出：能生成分辨率高、细节丰富的图像。
+                       2. 灵活性：支持多种图像生成和编辑任务。
+                       3. 效率：通过在潜在空间工作，大大提高了计算效率。
+                       4. 开源：模型开源，便于研究和改进。
+                       5. 可控性：通过调整参数和提示词，可以精确控制生成结果。</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+
